@@ -1,12 +1,15 @@
 const net = require("net");
 const zlib = require("zlib");
 const fs = require("fs");
+const path = require("path");
 
-const readBufferV4 = fs.readFileSync("./data/ipv4s.json.gz");
+const curDIR = __dirname;
+
+const readBufferV4 = fs.readFileSync(path.join(curDIR, "./data/ipv4s.json.gz"));
 const decodeBufferV4 = zlib.gunzipSync(readBufferV4);
 const ipv4s = JSON.parse(decodeBufferV4.toString());
 
-const readBufferV6 = fs.readFileSync("./data/ipv6s.json.gz");
+const readBufferV6 = fs.readFileSync(path.join(curDIR, "./data/ipv6s.json.gz"));
 const decodeBufferV6 = zlib.gunzipSync(readBufferV6);
 const ipv6s = JSON.parse(decodeBufferV6.toString());
 
