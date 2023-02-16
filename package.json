@@ -1,0 +1,23 @@
+{
+    "name": "ip2country.js",
+    "version": "1.0.1",
+    "description": "Convert IP to country code",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ip",
+        "country"
+    ],
+    "author": "wangshisan",
+    "license": "ISC",
+    "dependencies": {
+        "bignumber.js": "^9.1.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.15.0",
+        "eslint-config-prettier": "^8.5.0",
+        "mocha": "^10.2.0"
+    }
+}

@@ -15,8 +15,8 @@ npm install ip2country.js
 
 #### 3. 数据来源
 
-    ```
-    https://www.maxmind.com/en/accounts/current/geoip/downloads
-    找到 GeoLite2 Country: CSV Format, 下载之后, 解压到本项目的data目录下, 然后执行
-    node tools.js, 会更新数据
-    ```
+```
+https://www.maxmind.com/en/accounts/current/geoip/downloads
+找到 GeoLite2 Country: CSV Format, 下载之后, 解压到本项目的data目录下, 然后执行
+node tools.js, 会更新数据
+```
