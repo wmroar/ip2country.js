@@ -58,7 +58,7 @@ function _searchIPv6(ipv6) {
     return null;
 }
 
-function ip2county(ip) {
+function ip2country(ip) {
     let ret;
     if (net.isIPv4(ip)) {
         ret = _searchIPv4(ip);
@@ -74,6 +74,6 @@ function ip2county(ip) {
 }
 
 module.exports = {
-    ip2county
+    ip2country
 };
 

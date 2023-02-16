@@ -1,6 +1,6 @@
 {
     "name": "ip2country.js",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "description": "Convert IP to country code",
     "main": "index.js",
     "scripts": {
