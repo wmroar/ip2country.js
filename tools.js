@@ -13,13 +13,14 @@ function _readCountryLocation() {
     const data = {};
     for (let one of fileData) {
         const geoInfo = one.split(",");
-        const gemId = geoInfo[0];
+        const geoId = geoInfo[0];
+        const continentCode = geoInfo[2];
         const countryCode = geoInfo[4];
         const contryName = geoInfo[5];
         if (countryCode) {
-            data[gemId] = {code: countryCode};
+            data[geoId] = {code: countryCode, continentCode: continentCode};
         } else {
-            console.log(countryCode, gemId, contryName);
+            console.log(countryCode, geoId, contryName);
         }
     }
     return data;
@@ -113,7 +114,6 @@ function _doParseIpv6(gemIdCountryMap) {
 }
 
 async function _saveFile(fileName, data) {
-    console.log(Buffer.from(data, "utf-8"));
     fs.writeFileSync(path.join(__dirname, "data", fileName), zlib.gzipSync(Buffer.from(JSON.stringify(data), "utf-8")));
 }
 

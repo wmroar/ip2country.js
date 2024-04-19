@@ -1,6 +1,6 @@
 const assert = require("assert");
 const {describe, it} = require("mocha");
-const {ip2country} = require("../index");
+const {ip2country, ip2Continent} = require("../index");
 
 describe("IPV4", function() {
     it("should return SE", function() {
@@ -41,9 +41,13 @@ describe("IPV6", function() {
     it("should return DE", function() {
         const code = ip2country("2a02:8070:c69d:db00:ca0:ca0e:8235:1a33");
         assert.equal(code, "DE");
+        const code1 = ip2Continent("2a02:8070:c69d:db00:ca0:ca0e:8235:1a33");
+        assert.equal(code1, "EU");
     });
     it("should return Brasil", function() {
         const code = ip2country("2804:7f4:8280:23b6:758a:a9b:7a01:cdfa");
         assert.equal(code, "BR");
+        const code1 = ip2Continent("2804:7f4:8280:23b6:758a:a9b:7a01:cdfa");
+        assert.equal(code1, "SA");
     });
 });

@@ -66,14 +66,28 @@ function ip2country(ip) {
         ret = _searchIPv6(ip);
     }
 
-    // return ret?.code ?? "unkown";
     if (ret) {
         return ret.code;
     };
     return "unkown";
 }
 
+function ip2Continent(ip) {
+    let ret;
+    if (net.isIPv4(ip)) {
+        ret = _searchIPv4(ip);
+    } else if (net.isIPv6(ip)) {
+        ret = _searchIPv6(ip);
+    }
+
+    if (ret) {
+        return ret.continentCode;
+    };
+    return "unkown";
+}
+
 module.exports = {
-    ip2country
+    ip2country,
+    ip2Continent
 };
 
